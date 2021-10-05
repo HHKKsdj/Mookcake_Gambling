@@ -12,8 +12,4 @@
   <button bindtap='goToBobing' size='mini' disabled='{{disabled}}'>博一博</button>
 </view>
 
-
-
-<cloud-tip-modal showUploadTipProps="{{showUploadTip}}"></cloud-tip-modal>
-
 </view>
