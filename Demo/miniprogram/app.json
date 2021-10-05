@@ -1,0 +1,52 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/getOpenId/index",
+        "pages/getMiniProgramCode/index",
+        "pages/deployService/index",
+        "pages/createCollection/index",
+        "pages/uploadFile/index",
+        "pages/selectRecord/index",
+        "pages/updateRecord/index",
+        "pages/updateRecordResult/index",
+        "pages/updateRecordSuccess/index",
+        "pages/sumRecord/index",
+        "pages/sumRecordResult/index",
+        "pages/博饼/index",
+        "pages/我/index",
+        "pages/规则/index"
+
+
+
+
+    ],
+    "window": {
+        "backgroundColor": "#F6F6F6",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#F6F6F6",
+        "navigationBarTitleText": "博饼",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "selectedIconPath": "images/博饼1.png", 
+                "iconPath": "images/博饼2.png",
+                "pagePath": "pages/index/index"
+            },
+        
+            {
+                "selectedIconPath": "images/规则1.png", 
+                "iconPath": "images/规则2.png",
+                "pagePath": "pages/规则/index"
+            },
+            {
+                "selectedIconPath": "images/我的1.png", 
+                "iconPath": "images/我的2.png",
+                "pagePath": "pages/我/index"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json",
+    "style": "v2"
+}
