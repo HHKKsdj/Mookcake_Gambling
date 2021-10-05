@@ -1,0 +1,41 @@
+<!--pages/game/game.wxml-->
+<view class="container">
+
+<view class='view'>
+  <button bindtap='creat' size='mini' disabled='{{disabled}}'>创建房间</button>
+</view>
+<view class='view1'>
+  <button bindtap='join' size='mini' disabled='{{disabled}}'>加入房间</button>
+</view>
+
+<!--弹框-->
+<modal hidden="{{hiddenmodalput}}" title="房间号" confirm-text="加入" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">  
+    <input class="text" type='text' placeholder="请输入房间号" focus="true"/>  
+</modal>
+
+<view class="index">
+<image class="bg" src="/images/background.jpg"></image>
+</view>
+  <view class="power" wx:key="title" wx:for="{{powerList}}" wx:for-item="power">
+    <view class="power_info" data-index="{{index}}" bindtap="onClickPowerInfo">
+      <view class="power_info_text">
+        <view class="power_info_text_title">{{power.title}}</view>
+        <view class="power_info_text_tip">{{power.tip}}</view>
+      </view>
+      <image wx:if="{{!power.showItem}}" class="power_info_more" src="../../images/arrow.svg"></image>
+      <image wx:if="{{power.showItem}}" class="power_info_less" src="../../images/arrow.svg"></image>
+    </view>
+    <view wx:if="{{power.showItem}}">
+      <view wx:key="title" wx:for="{{power.item}}">
+        <view class="line"></view>
+        <view class="power_item" bindtap="jumpPage" data-page="{{item.page}}">
+          <view class="power_item_title">{{item.title}}</view>
+          <image class="power_item_icon" src="../../images/arrow.svg"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <cloud-tip-modal showUploadTipProps="{{showUploadTip}}"></cloud-tip-modal>
+
+</view>

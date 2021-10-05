@@ -1,24 +1,8 @@
 {
     "pages": [
-        "pages/index/index",
-        "pages/getOpenId/index",
-        "pages/getMiniProgramCode/index",
-        "pages/deployService/index",
-        "pages/createCollection/index",
-        "pages/uploadFile/index",
-        "pages/selectRecord/index",
-        "pages/updateRecord/index",
-        "pages/updateRecordResult/index",
-        "pages/updateRecordSuccess/index",
-        "pages/sumRecord/index",
-        "pages/sumRecordResult/index",
-        "pages/博饼/index",
-        "pages/我/index",
-        "pages/规则/index"
-
-
-
-
+        "pages/game/game",
+        "pages/mine/mine",
+        "pages/rule/rule"
     ],
     "window": {
         "backgroundColor": "#F6F6F6",
@@ -30,20 +14,20 @@
     "tabBar": {
         "list": [
             {
-                "selectedIconPath": "images/博饼1.png", 
-                "iconPath": "images/博饼2.png",
-                "pagePath": "pages/index/index"
+                "selectedIconPath": "icon/game1.png", 
+                "iconPath": "icon/game2.png",
+                "pagePath": "pages/game/game"
             },
         
             {
-                "selectedIconPath": "images/规则1.png", 
-                "iconPath": "images/规则2.png",
-                "pagePath": "pages/规则/index"
+                "selectedIconPath": "icon/rule1.png", 
+                "iconPath": "icon/rule2.png",
+                "pagePath": "pages/rule/rule"
             },
             {
-                "selectedIconPath": "images/我的1.png", 
-                "iconPath": "images/我的2.png",
-                "pagePath": "pages/我/index"
+                "selectedIconPath": "icon/mine1.png", 
+                "iconPath": "icon/mine2.png",
+                "pagePath": "pages/mine/mine"
             }
         ]
     },
