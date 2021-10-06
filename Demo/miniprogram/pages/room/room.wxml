@@ -6,14 +6,11 @@
   <image class="bg" src="/images/background.jpg"></image>
 </view>
 
-
-
 <view class="bowl">
   <image class="w" src="/images/bowl.png"></image>
 </view>
 
 <text class='text'>{{txt}}</text>
-
 
   <view class='point1'>
     <image class="one" src='{{one_img}}'></image>
@@ -28,6 +25,63 @@
 
 <view class='view'>
   <button bindtap='begin' size='mini' disabled='{{disabled}}'>博一博</button>
+</view>
+
+<view class="table">
+    <view class="thead">
+        <view class="tr">
+            <view class="th"> </view>
+            <view class="th">状元</view>
+            <view class="th">对堂</view>
+            <view class="th">三红</view>
+            <view class="th">四进</view>
+            <view class="th">二举</view>
+            <view class="th">一秀</view>
+        </view>
+    </view>
+    <view class="tbody">
+        <view class="box">
+            <view class="tr">
+                <view class="td">剩余</view>
+                <view class="td">1</view>
+                <view class="td">2</view>
+                <view class="td">{{4-1}}</view>
+                <view class="td">8</view>
+                <view class="td">16</view>
+                <view class="td">32</view>
+            </view>
+            <view class="tr">
+                <view class="td">user1</view>
+                <view class="td">0</view>
+                <view class="td">0</view>
+                <view class="td">0</view>
+                <view class="td">0</view>
+                <view class="td">0</view>
+                <view class="td">0</view>
+            </view>
+            <block wx:for="{{22}}">
+                <view class="tr">
+                    <view class="td">user</view>
+                    <view class="td">0</view>
+                    <view class="td">0</view>
+                    <view class="td">0</view>
+                    <view class="td">0</view>
+                    <view class="td">0</view>
+                    <view class="td">0</view>
+                </view>
+            </block>
+            
+            <view class="tr last">
+                <view class="td">user</view>
+                <view class="td">0</view>
+                <view class="td">0</view>
+                <view class="td">0</view>
+                <view class="td">0</view>
+                <view class="td">0</view>
+                <view class="td">0</view>
+            </view>
+        </view>
+    </view>
 </view>
 
 </view>
