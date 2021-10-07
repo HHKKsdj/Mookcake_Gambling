@@ -1,4 +1,5 @@
 // pages/singleplayer/singleplayer.js
+var num = [0,0,0,0,0,0];
 Page({
   data: {
     one_img:'../../images/6-point.png',
@@ -79,7 +80,8 @@ Page({
 
       if (point[3]==4) {
         if (point[0]==2) {
-          result = "状元插金花";;
+          result = "状元插金花";
+          num[5] = num[5]+1;
         } else {
           result = "四点红";
         }
@@ -95,20 +97,26 @@ Page({
         result = "五子";
       } else if (point[0]==1&&point[1]==1&&point[2]==1&&point[3]==1&&point[4]==1&&point[5]==1) {
         result = "对堂";
+        num[4] = num[4]+1;
       } else if (point[3]==3) {
         result = "三红";
+        num[3] = num[3]+1;
       } else if (point[0]==4&&point[1]==4&&point[2]==4&&point[4]==4&&point[5]==4) {
         result = "四进";
+        num[2] = num[2]+1;
       } else if (point[3]==2) {
         result = "二举";
+        num[1] = num[1]+1;
       } else if (point[3]==1) {
         result = "一秀";
+        num[0] = num[0]+1;
       } else {
         result = "什么都没摇到";
       }
       obj.setData({
         txt : result,
         flag: true,
+        num : num,
       })
     }, 1500);
 

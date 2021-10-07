@@ -42,46 +42,15 @@
      <view class="tbody">
          <view class="box">
              <view class="tr">
-                 <view class="td">剩余</view>
-                 <view class="td">1</view>
-                 <view class="td">2</view>
-                 <view class="td">{{4-1}}</view>
-                 <view class="td">8</view>
-                 <view class="td">16</view>
-                 <view class="td">32</view>
+                 <view class="td">个数</view>
+                 <view class="td">{{num[5]}}</view>
+                 <view class="td">{{num[4]}}</view>
+                 <view class="td">{{num[3]}}</view>
+                 <view class="td">{{num[2]}}</view>
+                 <view class="td">{{num[1]}}</view>
+                 <view class="td">{{num[0]}}</view>
              </view>
-             <view class="tr">
-                 <view class="td">user1</view>
-                 <view class="td">0</view>
-                 <view class="td">0</view>
-                 <view class="td">0</view>
-                 <view class="td">0</view>
-                 <view class="td">0</view>
-                 <view class="td">0</view>
-             </view>
-             <block wx:for="{{22}}">
-                 <view class="tr">
-                     <view class="td">user</view>
-                     <view class="td">0</view>
-                     <view class="td">0</view>
-                     <view class="td">0</view>
-                     <view class="td">0</view>
-                     <view class="td">0</view>
-                     <view class="td">0</view>
-                 </view>
-             </block>
-             
-             <view class="tr last">
-                 <view class="td">user</view>
-                 <view class="td">0</view>
-                 <view class="td">0</view>
-                 <view class="td">0</view>
-                 <view class="td">0</view>
-                 <view class="td">0</view>
-                 <view class="td">0</view>
-             </view>
-         </view>
-     </view>
+        </view>
+    </view>
  </view>
- 
  </view>
