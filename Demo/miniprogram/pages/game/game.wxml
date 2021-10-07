@@ -9,8 +9,8 @@
 </view>
 
 <!--弹框-->
-<modal hidden="{{hiddenmodalput}}" title="房间号" confirm-text="加入" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">  
-    <input class="text" type='text' placeholder="请输入房间号" focus="true"/>  
+<modal hidden="{{hiddenmodalput}}" title="博饼人数" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm"> 
+    <input class="text" type='text' value="{{inputValue}}" bindinput="input" placeholder="请输入人数（不少于两人）" focus="true"/>  
 </modal>
 
 <view class="index">

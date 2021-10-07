@@ -7,7 +7,7 @@ Page({
     //弹框
     hiddenmodalput:true,
 
-    num: 5,
+    inputValue: '',
 
     showUploadTip: false,
     envList,
@@ -33,27 +33,30 @@ mulitplayer: function(){
  //取消按钮  
  cancel: function(){  
    this.setData({  
-     hiddenmodalput: true  
+     hiddenmodalput: true,  
+     inputValue: '',
    });  
  },  
  //确认按钮
- confirm: function(){  
-   this.setData({  
-     hiddenmodalput: true  
+confirm: function(options){  
+  //判断输入人数是否大于两人
+  if (Number(this.data.inputValue)>=2){
+    wx.navigateTo({
+      url:'/pages/mulitplayer/mulitplayer?num='+this.data.inputValue,
+    })
+    this.setData({  
+      hiddenmodalput: true,
+      inputValue: '',
+    })
+  }
+  
+},
+
+ input: function (options) {
+   this.setData({
+     inputValue: options.detail.value,
    })
-   wx.navigateTo({
-    url:'/pages/mulitplayer/mulitplayer?num='+this.data.num,
- })
  },
-
-
-  onShareAppMessage: function () {
-    return {
-      title: '博饼',
-      desc: '快来玩吧',
-      path: '/page/user?id=123'
-    }
-  },
 
 })
 
