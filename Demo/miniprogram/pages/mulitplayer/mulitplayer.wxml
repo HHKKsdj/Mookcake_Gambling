@@ -43,23 +43,23 @@
         <view class="box">
             <view class="tr">
                 <view class="td">剩余</view>
-                <view class="td">1</view>
-                <view class="td">2</view>
-                <view class="td">{{4-1}}</view>
-                <view class="td">8</view>
-                <view class="td">16</view>
-                <view class="td">32</view>
+                <view class="td">{{1-total[5]}}</view>
+                <view class="td">{{2-total[4]}}</view>
+                <view class="td">{{4-total[3]}}</view>
+                <view class="td">{{8-total[2]}}</view>
+                <view class="td">{{16-total[1]}}</view>
+                <view class="td">{{32-total[0]}}</view>
             </view>
             
-            <block wx:for="{{num}}" wx:for-index="ind">
+            <block wx:for="{{player}}" wx:for-index="ind">
                 <view class="tr">
                     <view class="td">user{{ind+1}}</view>
-                    <view class="td">0</view>
-                    <view class="td">0</view>
-                    <view class="td">0</view>
-                    <view class="td">0</view>
-                    <view class="td">0</view>
-                    <view class="td">0</view>
+                    <view class="td">{{item.record[5]}}</view>
+                    <view class="td">{{item.record[4]}}</view>
+                    <view class="td">{{item.record[3]}}</view>
+                    <view class="td">{{item.record[2]}}</view>
+                    <view class="td">{{item.record[1]}}</view>
+                    <view class="td">{{item.record[0]}}</view>
                 </view>
             </block>
             
