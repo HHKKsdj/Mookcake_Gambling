@@ -1,7 +1,4 @@
-// pages/room/room.js
-const app = getApp()
-const { envList } = require('../../envList.js')
-
+// pages/singleplayer/singleplayer.js
 Page({
   data: {
     one_img:'../../images/6-point.png',
@@ -11,9 +8,10 @@ Page({
     five_img: '../../images/6-point.png',
     six_img: '../../images/6-point.png',
 
-    timer:null,
-    txt:'什么都没摇到',
-    //图片的素材和效果图会发在最下面
+    timer: null,
+    txt: '什么都没摇到',
+    flag: true,
+
     arr:[
       '../../images/1-point.png',
       '../../images/2-point.png',
@@ -34,7 +32,9 @@ Page({
   begin:function(event){
     let obj = this;
     var point = [0,0,0,0,0,0];
-    obj.data.timer = setInterval(function () {
+    let f = obj.data.flag;
+    if (f == true) {
+      obj.data.timer = setInterval(function () {
       
       let one = Math.floor(Math.random() * 6);
       let two = Math.floor(Math.random() * 6);
@@ -58,14 +58,15 @@ Page({
         five: five,
         six: six,
 
+        flag : false,
         point : point,
         txt:obj.txt,
-        
       })
     }, 100);
+    }
+    
     setTimeout(() => {
       clearInterval(obj.data.timer);
-      
       var point = [0,0,0,0,0,0];
       var result = "";
 
@@ -107,23 +108,10 @@ Page({
       }
       obj.setData({
         txt : result,
+        flag: true,
       })
     }, 1500);
-    /*
-    if(obj.data.flag==true){
-       
-    }else{
-      clearInterval(obj.data.timer);
-      obj.setData({
-         //one_img: obj.data.arr[5],
-         //two_img: obj.data.arr[5],
-         //three_img: obj.data.arr[5],
-           msg:'摇一摇',
-           flag:true,
-           txt:'恭喜你摇到了:'+obj.data.total,
-      })
-    }
-    */
+
   },
 
 })

@@ -2,10 +2,10 @@
 <view class="container">
 
 <view class='view'>
-  <button bindtap='creat' size='mini' disabled='{{disabled}}'>创建房间</button>
+  <button bindtap='singleplayer' size='mini' disabled='{{disabled}}'>单人模式</button>
 </view>
 <view class='view1'>
-  <button bindtap='join' size='mini' disabled='{{disabled}}'>加入房间</button>
+  <button bindtap='mulitplayer' size='mini' disabled='{{disabled}}'>多人模式</button>
 </view>
 
 <!--弹框-->

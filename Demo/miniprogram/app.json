@@ -2,7 +2,10 @@
     "pages": [
         "pages/game/game",
         "pages/mine/mine",
-        "pages/rule/rule"
+        "pages/rule/rule",
+
+        "pages/mulitplayer/mulitplayer",
+        "pages/singleplayer/singleplayer"
     ],
     "window": {
         "backgroundColor": "#F6F6F6",

@@ -16,14 +16,15 @@ Page({
 
   
 
-//创建房间
-creat:function(){
+//单人模式
+singleplayer:function(){
   wx.navigateTo({
-     url:'/pages/room/room',
+     url:'/pages/singleplayer/singleplayer',
   })
 },
-//加入房间
-join: function(){  
+//多人模式
+//弹框
+mulitplayer: function(){  
   this.setData({  
     hiddenmodalput: !this.data.hiddenmodalput
    })  
@@ -38,7 +39,10 @@ join: function(){
  confirm: function(){  
    this.setData({  
      hiddenmodalput: true  
-   })  
+   })
+   wx.navigateTo({
+    url:'/pages/mulitplayer/mulitplayer',
+ })
  },
 
 
