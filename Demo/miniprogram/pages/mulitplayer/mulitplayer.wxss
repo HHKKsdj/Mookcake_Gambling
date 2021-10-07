@@ -91,6 +91,7 @@
   width: 56px;
   border-bottom: 1px solid black;
   border-right: 1px solid black;
+  text-align: center;
   box-sizing: border-box;
   /* 超出长度显示 ... */
   white-space: nowrap;
