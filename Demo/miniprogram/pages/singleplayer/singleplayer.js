@@ -126,6 +126,8 @@ Page({
       })
     }, 1500);
 
+    wx.setStorageSync('record', num);
+
   },
 
 })

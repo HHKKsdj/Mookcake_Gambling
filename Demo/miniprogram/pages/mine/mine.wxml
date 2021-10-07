@@ -9,27 +9,33 @@
 <view class = "table"> </view>
 
 <view class="type">
-<text>状元</text>
+  <text decode="{{true}}">&nbsp;&nbsp;{{record[5]}}</text>
+  <text>状元</text>
 </view>
 
 <view class="type1">
-<text>对堂</text>
+  <text decode="{{true}}">&nbsp;&nbsp;{{record[4]}}</text>
+  <text>对堂</text>
 </view>
 
 <view class="type2">
-<text>三红</text>
+  <text decode="{{true}}">&nbsp;&nbsp;{{record[3]}}</text>
+  <text>三红</text>
 </view>
 
 <view class="type3">
-<text>四进</text>
+  <text decode="{{true}}">&nbsp;&nbsp;{{record[2]}}</text>
+  <text>四进</text>
 </view>
 
 <view class="type4">
-<text>二举</text>
+  <text decode="{{true}}">&nbsp;&nbsp;{{record[1]}}</text>
+  <text>二举</text>
 </view>
 
 <view class="type5">
-<text>一秀</text>
+  <text decode="{{true}}">&nbsp;&nbsp;{{record[0]}}</text>
+  <text>一秀</text>
 </view>
 
 </view>
