@@ -8,3 +8,80 @@
     background-size:100% 100%;
     z-index: -1;
   }
+
+  .record{
+    width: 80%;
+    height: 45%;
+    position:fixed; 
+    top: 0rpx;
+    margin-top: 100rpx;
+    margin-left: -300rpx;
+  }
+
+
+  .table {
+    display: flex;
+    flex-direction: column;
+    width: 78%;
+    height: 580rpx;
+    background-color: rgba(238, 238, 238, 0.678);
+    overflow: auto;
+    margin-top: 105rpx;
+    }
+
+    .type {
+      display: flex;
+      flex-direction: column;
+      color: rgb(49, 48, 48);
+      width: 100%;
+      height: 300px;
+      margin-top: -370rpx;
+      margin-left: 700rpx;
+      }
+
+      .type1 {
+        display: flex;
+        flex-direction: column;
+        color: rgb(49, 48, 48);
+        width: 100%;
+        height: 300px;
+        margin-top: -430rpx;
+        margin-left: 430rpx;
+        }
+        .type2 {
+          display: flex;
+          flex-direction: column;
+          color: rgb(49, 48, 48);
+          width: 100%;
+          height: 300px;
+          margin-top: -540rpx;
+          margin-left: 930rpx;
+          }
+       .type3 {
+            display: flex;
+            flex-direction: column;
+            color: rgb(49, 48, 48);
+            width: 100%;
+            height: 300px;
+            margin-top: -400rpx;
+            margin-left: 320rpx;
+      }
+      .type4{
+        display: flex;
+        flex-direction: column;
+        color: rgb(49, 48, 48);
+        width: 100%;
+        height: 300px;
+        margin-top: -545rpx;
+        margin-left: 670rpx;
+     }
+     .type5{
+      display: flex;
+      flex-direction: column;
+      color: rgb(49, 48, 48);
+      width: 100%;
+      height: 300px;
+      margin-top: -546rpx;
+      margin-left: 1010rpx;
+    }
+     

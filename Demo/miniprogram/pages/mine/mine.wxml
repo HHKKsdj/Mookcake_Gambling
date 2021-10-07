@@ -3,6 +3,34 @@
 <view class="index">
 <image class="bg" src="/images/background.jpg"></image>
 </view>
+<view class="index">
+<image class="record" src="/images/record.png"></image>
+</view>
+<view class = "table"> </view>
+
+<view class="type">
+<text>状元</text>
+</view>
+
+<view class="type1">
+<text>对堂</text>
+</view>
+
+<view class="type2">
+<text>三红</text>
+</view>
+
+<view class="type3">
+<text>四进</text>
+</view>
+
+<view class="type4">
+<text>二举</text>
+</view>
+
+<view class="type5">
+<text>一秀</text>
+</view>
 
 </view>
 
