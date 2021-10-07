@@ -83,18 +83,24 @@ Page({
           result = "状元插金花";
           num[5] = num[5]+1;
         } else {
-          result = "四点红";
+          result = "状元";
+          num[5] = num[5]+1;
         }
       } else if (point[3]==6) {
         result = "满堂红";
+        num[5] = num[5]+1;
       } else if (point[0]==6) {
         result = "遍地锦";
+        num[5] = num[5]+1;
       } else if (point[1]==6&&point[2]==6&&point[4]==6&&point[5]==6) {
         result = "六勃黑";
+        num[5] = num[5]+1;
       } else if (point[3]==5) {
         result = "五王";
+        num[5] = num[5]+1;
       } else if (point[0]==5&&point[1]==5&&point[2]==5&&point[3]==5&&point[4]==5&&point[5]==5) {
         result = "五子";
+        num[5] = num[5]+1;
       } else if (point[0]==1&&point[1]==1&&point[2]==1&&point[3]==1&&point[4]==1&&point[5]==1) {
         result = "对堂";
         num[4] = num[4]+1;
