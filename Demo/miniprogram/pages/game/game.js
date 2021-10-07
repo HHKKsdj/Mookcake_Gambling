@@ -7,6 +7,7 @@ Page({
     //弹框
     hiddenmodalput:true,
 
+    num: 5,
 
     showUploadTip: false,
     envList,
@@ -41,7 +42,7 @@ mulitplayer: function(){
      hiddenmodalput: true  
    })
    wx.navigateTo({
-    url:'/pages/mulitplayer/mulitplayer',
+    url:'/pages/mulitplayer/mulitplayer?num='+this.data.num,
  })
  },
 

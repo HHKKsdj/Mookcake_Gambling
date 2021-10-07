@@ -1,5 +1,12 @@
 // pages/mulitplayer/mulitplayer.js
 Page({
+onLoad: function (options) {
+  console.log(options);
+  this.setData({
+    num: Number(options.num),
+  })
+},
+
   data: {
     one_img:'../../images/6-point.png',
     two_img: '../../images/6-point.png',
@@ -11,6 +18,8 @@ Page({
     timer: null,
     txt: '什么都没摇到',
     flag: true,
+    
+    num: 0,  
 
     arr:[
       '../../images/1-point.png',

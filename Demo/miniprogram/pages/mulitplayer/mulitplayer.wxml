@@ -50,18 +50,10 @@
                 <view class="td">16</view>
                 <view class="td">32</view>
             </view>
-            <view class="tr">
-                <view class="td">user1</view>
-                <view class="td">0</view>
-                <view class="td">0</view>
-                <view class="td">0</view>
-                <view class="td">0</view>
-                <view class="td">0</view>
-                <view class="td">0</view>
-            </view>
-            <block wx:for="{{22}}">
+            
+            <block wx:for="{{num}}" wx:for-index="ind">
                 <view class="tr">
-                    <view class="td">user</view>
+                    <view class="td">user{{ind+1}}</view>
                     <view class="td">0</view>
                     <view class="td">0</view>
                     <view class="td">0</view>
@@ -71,15 +63,7 @@
                 </view>
             </block>
             
-            <view class="tr last">
-                <view class="td">user</view>
-                <view class="td">0</view>
-                <view class="td">0</view>
-                <view class="td">0</view>
-                <view class="td">0</view>
-                <view class="td">0</view>
-                <view class="td">0</view>
-            </view>
+            
         </view>
     </view>
 </view>
