@@ -124,7 +124,7 @@ Page({
         flag: true,
         num : num,
       })
-    }, 1500);
+    }, 1000);
 
     wx.setStorageSync('record', num);
 

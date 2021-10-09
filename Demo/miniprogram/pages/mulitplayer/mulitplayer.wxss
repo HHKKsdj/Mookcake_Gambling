@@ -54,6 +54,16 @@
   height: 35px;
 }
 
+
+.reminder {
+  font-weight: bold;
+  font-size:x-large ;
+  color: yellow;
+  margin-top: 100rpx;
+  margin-left: 50rpx;
+}
+
+
 .table {
   display: flex;
   flex-direction: column;
@@ -61,7 +71,7 @@
   height: 250px;
   background-color: rgba(238, 238, 238, 0.678);
   overflow: auto;
-  margin-top: 200rpx;
+  margin-top: 100rpx;
 }
 
 
@@ -93,7 +103,6 @@
   border-right: 1px solid black;
   text-align: center;
   box-sizing: border-box;
-  /* 超出长度显示 ... */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -101,36 +110,29 @@
 
 
 .td:first-child, .th:first-child {
-  /* 设置首列200 ,设置th才有效*/
-  /* width: 200px; */
   border-left: 1px solid black;
 }
 
 
-/* 如果border collapse,滚动会跟着动，所以单独给每个元素设置border */
 .td:last-child, .th:last-child {
   border-right: 1px solid black;
 }
 
 
 .last .td {
-  /* 最后一行底部border */
   border-bottom: 1px solid black;
 }
 
 
 .thead .tr .th {
-  /* th设置粘性定位 */
   background-color:  rgba(238, 238, 238, 0.678);
   position: sticky;
   top: 0;
-  /* 顶部border */
   border-top: 1px solid black;
 }
 
 
 .td:first-child {
-  /* td第一个粘性定位 */
   position: sticky;
   left: 0;
   background-color:  rgba(238, 238, 238, 0.678);
@@ -138,7 +140,6 @@
 
 
 .thead .tr .th:first-child {
-  /* 第一个由于要保持上下和左右滚动都不被覆盖，设置在最上面 */
   z-index: 2;
   left: 0;
 }

@@ -1,8 +1,15 @@
 // pages/game/game.js
+App({
+  onLaunch: function () {
+    console.log("load");
+    wx.setStorageSync('num', 0)
+  }
+})
 const app = getApp()
 const { envList } = require('../../envList.js')
 
 Page({
+
   data: {
     //弹框
     hiddenmodalput:true,
@@ -26,9 +33,19 @@ singleplayer:function(){
 //多人模式
 //弹框
 mulitplayer: function(){  
-  this.setData({  
-    hiddenmodalput: !this.data.hiddenmodalput
-   })  
+  let num = wx.getStorageSync('num');
+  console.log(num);
+  if (num > 0) {
+     console.log(num);
+    wx.navigateTo({
+      url:'/pages/mulitplayer/mulitplayer?num='+0,
+    })
+  } else {
+    this.setData({  
+      hiddenmodalput: false,
+     })  
+  }
+  
  },  
  //取消按钮  
  cancel: function(){  

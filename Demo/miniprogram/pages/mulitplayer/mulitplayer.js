@@ -11,13 +11,37 @@ Page({
     this.setData({
       num: Number(options.num),
     })
-    for (let i = 0; i < this.data.num; i++) {
+    if (this.data.num != 0){
+      wx.setStorageSync('num', this.data.num);
+    }
+    
+    for (var i = 0; i < this.data.num; i++) {
       players.push({
         name: "user" + i,
         record: [0, 0, 0, 0, 0, 0]
       })
     }
+    this.setData({
+      player: players,
+    })
   },
+  
+
+  onShow: function () {
+    var tot = this.data.total;
+    let player = this.data.player;
+    for (var i=0;i<this.data.num;i++) {
+      for (var j=0;j<6;j++){
+        tot[j] += player[i].record[j];
+      }
+    }
+    this.setData ({
+      total: tot,
+      index: index+1,
+    })
+    console.log(this.data.index)
+  },
+
 
   data: {
     player: [],
@@ -33,7 +57,6 @@ Page({
     timer: null,
     txt: '什么都没摇到',
     flag: true,
-
 
     num: 0,
 
@@ -52,6 +75,7 @@ Page({
     five: 0,
     six: 0,
 
+    index:1,
   },
 
   begin: function (event) {
@@ -144,7 +168,6 @@ Page({
         result = "什么都没摇到";
       }
 
-      
       for (var i=0;i<6;i++){
         totalNum[i] += num[i];
       }
@@ -176,10 +199,11 @@ Page({
       
       obj.setData({
         player: players,
+        index: index+1,
       })
 
       console.log(this.data.player);
-    }, 1500);
+    }, 1000);
 
   },
 

@@ -6,6 +6,8 @@
   <image class="bg" src="/images/background.jpg"></image>
 </view>
 
+
+
 <view class="bowl">
   <image class="w" src="/images/bowl.png"></image>
 </view>
@@ -26,6 +28,8 @@
 <view class='view'>
   <button bindtap='begin' size='mini' disabled='{{disabled}}'>博一博</button>
 </view>
+
+<text class="reminder">请玩家{{index}}掷骰子！</text>
 
 <view class="table">
     <view class="thead">
@@ -52,8 +56,9 @@
             </view>
             
             <block wx:for="{{player}}" wx:for-index="ind">
+            
                 <view class="tr">
-                    <view class="td">user{{ind+1}}</view>
+                    <view class="td">玩家{{ind+1}}</view>
                     <view class="td">{{item.record[5]}}</view>
                     <view class="td">{{item.record[4]}}</view>
                     <view class="td">{{item.record[3]}}</view>
@@ -62,8 +67,7 @@
                     <view class="td">{{item.record[0]}}</view>
                 </view>
             </block>
-            
-            
+
         </view>
     </view>
 </view>
