@@ -76,4 +76,9 @@
     </view>
 </view>
 
+<!--弹框-->
+<modal hidden="{{hiddenmodalput}}" title="添加人数" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm"> 
+    <input class="inputText" type='text' value="{{inputValue}}" bindinput="input" placeholder="请输入人数" focus="{{inputShowed}}"/>  
+</modal>
+
 </view>

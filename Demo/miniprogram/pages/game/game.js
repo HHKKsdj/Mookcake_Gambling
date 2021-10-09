@@ -9,17 +9,12 @@ const app = getApp()
 const { envList } = require('../../envList.js')
 
 Page({
-
   data: {
     //弹框
     hiddenmodalput:true,
 
     inputValue: '',
-
-    showUploadTip: false,
-    envList,
-    selectedEnv: envList[0],
-    haveCreateCollection: false
+    inputShowed: false,
   },
 
   
@@ -35,6 +30,9 @@ singleplayer:function(){
 mulitplayer: function(){  
   let num = wx.getStorageSync('num');
   console.log(num);
+  this.setData ({
+    inputShowed:true,
+  })
   if (num > 0) {
      console.log(num);
     wx.navigateTo({
@@ -64,6 +62,11 @@ confirm: function(options){
     this.setData({  
       hiddenmodalput: true,
       inputValue: '',
+    })
+  } else {
+    wx.showToast({
+      title: '人数需不少于两人！',
+      icon: "none",
     })
   }
   

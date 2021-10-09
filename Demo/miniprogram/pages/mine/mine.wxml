@@ -38,6 +38,10 @@
   <text>一秀</text>
 </view>
 
+<view class='view'>
+   <button bindtap='delete' size='mini' disabled='{{disabled}}'>清除记录</button>
+</view>
+
 </view>
 
 

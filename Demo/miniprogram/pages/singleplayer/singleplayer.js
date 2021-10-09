@@ -1,6 +1,14 @@
 // pages/singleplayer/singleplayer.js
 var num = [0,0,0,0,0,0];
 Page({
+
+  onShow: function () {
+    this.setData({
+      num:wx.getStorageSync('record'),
+    })
+    num = this.data.num;
+  },
+
   data: {
     one_img:'../../images/6-point.png',
     two_img: '../../images/6-point.png',
@@ -124,10 +132,11 @@ Page({
         flag: true,
         num : num,
       })
+      wx.setStorageSync('record', num);
+
     }, 1000);
 
-    wx.setStorageSync('record', num);
-
+    
   },
 
 })

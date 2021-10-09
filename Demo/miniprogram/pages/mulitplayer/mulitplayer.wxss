@@ -10,6 +10,18 @@
     z-index: -1;
   }
 
+/*
+  文本输入框大小
+*/
+.inputText {
+  border-style: solid;
+  border-width: thin;
+  border-color: gray;
+  border-radius: 10px;
+  text-align: center;
+  height: 30px;  
+}
+
 .setting {
   display: flex;
   flex-direction: row;

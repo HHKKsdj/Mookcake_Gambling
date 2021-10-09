@@ -25,21 +25,12 @@ Page({
       player: players,
     })
   },
-  
 
   onShow: function () {
-    var tot = this.data.total;
-    let player = this.data.player;
-    for (var i=0;i<this.data.num;i++) {
-      for (var j=0;j<6;j++){
-        tot[j] += player[i].record[j];
-      }
-    }
     this.setData ({
-      total: tot,
+      total: totalNum,
       index: index+1,
     })
-    console.log(this.data.index)
   },
 
 
@@ -76,6 +67,10 @@ Page({
     six: 0,
 
     index:1,
+
+    hiddenmodalput:true,
+    inputValue: '',
+    inputShowed: false,
   },
 
   begin: function (event) {
@@ -177,9 +172,9 @@ Page({
         flag: true,
         total: totalNum,
       })
+
       oldNum = players[index].record;
-      console.log(index);
-      console.log(oldNum);
+
       for (var i=0;i<6;i++) {
           num[i]+=oldNum[i];
       }
@@ -202,7 +197,7 @@ Page({
         index: index+1,
       })
 
-      console.log(this.data.player);
+
     }, 1000);
 
   },
@@ -214,26 +209,61 @@ Page({
       success: function(res) {
       if (res.confirm) {
         wx.setStorageSync('num', 0);
-        wx.navigateBack({
-          url:'/pages/game/game'
-        })
-    
         num = [0, 0, 0, 0, 0, 0];
         oldNum = [0,0,0,0,0,0];
         players = [];
         index = 0;
         totalNum = [0,0,0,0,0,0];
-        this.setData({
-          player:players,
-          num:0,
-          total:totalNum,
-          index:1,
+        
+        wx.navigateBack({
+          url:'/pages/game/game'
         })
       } else if (res.cancel) {
       
       }
       }
     })
-    
   },
+
+  add: function () {
+    this.setData({  
+      hiddenmodalput: false,
+      inputShowed: true,
+     }) 
+  },
+   //取消按钮  
+ cancel: function(){  
+  this.setData({  
+    hiddenmodalput: true,  
+    inputValue: '',
+  });  
+},  
+//确认按钮
+confirm: function(options){  
+  let addNum = this.data.num + Number(this.data.inputValue);
+  wx.setStorageSync('num', addNum);
+  for (var i = 0; i < this.data.inputValue; i++) {
+    players.push({
+      name: "user" + i,
+      record: [0, 0, 0, 0, 0, 0]
+    })
+  }
+
+  this.setData({
+    num: addNum,
+    hiddenmodalput: true,
+    player: players,
+    inputValue: "",
+  })
+  
+console.log(this.data.num);
+
+
+},
+
+input: function (options) {
+  this.setData({
+    inputValue: options.detail.value,
+  })
+},
 })

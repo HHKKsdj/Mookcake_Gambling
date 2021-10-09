@@ -5,8 +5,7 @@ const { envList } = require('../../envList.js')
 Page({
 
   data: {
-    record: wx.getStorageSync('record'),
-
+    record: [0,0,0,0,0,0],
   },
   onLoad: function () {
     this.setData({
@@ -16,6 +15,14 @@ Page({
   onShow: function () {
     this.setData({
       record: wx.getStorageSync('record'),
+    })
+  },
+
+  delete: function () {
+    let newRecord = [0,0,0,0,0,0];
+      wx.setStorageSync('record', newRecord);
+      this.setData({
+      record: newRecord,
     })
   },
 })

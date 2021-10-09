@@ -3,7 +3,7 @@
         "pages/game/game",
         "pages/mine/mine",
         "pages/rule/rule",
-        "pages/test/test",
+        
         "pages/mulitplayer/mulitplayer",
         "pages/singleplayer/singleplayer"
     ],
