@@ -207,4 +207,33 @@ Page({
 
   },
 
+  end: function () {
+    wx.showModal({
+      title: '提示',
+      content: '是否结束博饼？',
+      success: function(res) {
+      if (res.confirm) {
+        wx.setStorageSync('num', 0);
+        wx.navigateBack({
+          url:'/pages/game/game'
+        })
+    
+        num = [0, 0, 0, 0, 0, 0];
+        oldNum = [0,0,0,0,0,0];
+        players = [];
+        index = 0;
+        totalNum = [0,0,0,0,0,0];
+        this.setData({
+          player:players,
+          num:0,
+          total:totalNum,
+          index:1,
+        })
+      } else if (res.cancel) {
+      
+      }
+      }
+    })
+    
+  },
 })

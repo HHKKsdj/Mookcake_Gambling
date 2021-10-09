@@ -10,6 +10,19 @@
     z-index: -1;
   }
 
+.setting {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.end {
+  color: white;
+
+}
+.add {
+  color: white;
+}
+
   
   .w{
     width: 80%;
@@ -35,7 +48,7 @@
 
 
   .text{
-    margin-top: 56px;
+    margin-top: 16px;
     font-size: 17.5px;
     color: yellow;
     z-index: -1;

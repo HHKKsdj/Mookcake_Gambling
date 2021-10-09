@@ -6,6 +6,10 @@
   <image class="bg" src="/images/background.jpg"></image>
 </view>
 
+<view class='setting'>
+  <button class="end" bindtap="end">结束博饼</button>
+  <button class="add" bindtap="add">添加玩家</button>
+</view>
 
 
 <view class="bowl">
